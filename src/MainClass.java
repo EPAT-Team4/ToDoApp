@@ -47,7 +47,7 @@ public class MainClass {
 		case 2:
 			System.out.println("Please enter description: \n");
 			String description = scanner.nextLine();
-			Item item = new Item(description, null, null);
+			Item item = new Item(description, null, null, null);
 			toDoList.addItem(item);
 			showCurrentList();
 			break;

@@ -8,12 +8,14 @@ public class Item {
 	private String description;
 	private Integer priority;
 	private Date dueDate;
+	private String category;
 
-	public Item(String description, Integer priority, Date dueDate) {
+	public Item(String description, Integer priority, Date dueDate, String category) {
 		super();
 		this.description = description;
 		this.priority = priority;
 		this.dueDate = dueDate;
+		this.category = category;
 	}
 
 	public Integer getId() {
@@ -48,6 +50,13 @@ public class Item {
 		this.dueDate = dueDate;
 	}
 
+	public String getcategory() {
+		return category;
+	}
+
+	public void setcategory(String category) {
+		this.category = category;
+	}
 	@Override
 	public String toString() {
 		return "Item [id=" + id + ", description=" + description + ", priority=" + priority + ", dueDate=" + dueDate
