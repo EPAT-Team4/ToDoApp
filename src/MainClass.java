@@ -27,6 +27,7 @@ public class MainClass {
 		System.out.println("3. Delete an item");
 		System.out.println("4. Mark an item as complete");
 		System.out.println("5. Prioritize item");
+		System.out.println("6. Set item category");
 		System.out.println("9. Quit");
 		System.out.print("Enter your choice: ");
 	}
@@ -73,6 +74,17 @@ public class MainClass {
 			toDoList.getItems().get(itemPrioritizeId).setPriority(priorityLvl);
 			showCurrentList();
 			break;
+		
+		case 6:
+			System.out.println("Please enter item id to categorize: ");
+			int itemCategorizeId = scanner.nextInt();
+			scanner.nextLine();
+			System.out.println("Please enter Category: ");
+			String category = scanner.nextLine();
+			toDoList.getItems().get(itemCategorizeId).setcategory(category);
+			showCurrentList();
+			break;
+			
 		case 9:
 
 			break;

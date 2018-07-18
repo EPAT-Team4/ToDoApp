@@ -51,14 +51,14 @@ public class Item {
 	public void setDueDate(Date dueDate) {
 		this.dueDate = dueDate;
 	}
-	
+
 	public Boolean getIsCompleted() {
 		return isCompleted;
 	}
 
 	public void setIsCompleted(boolean isCompleted) {
 		this.isCompleted = isCompleted;
-	}	
+	}
 
 	public String getcategory() {
 		return category;
@@ -67,11 +67,11 @@ public class Item {
 	public void setcategory(String category) {
 		this.category = category;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Item [id=" + id + ", description=" + description + ", priority=" + priority + ", dueDate=" + dueDate + ", isCompleted=" + isCompleted
-				+ "]";
+		return "Item [id=" + id + ", description=" + description + ", priority=" + priority + ", dueDate=" + dueDate
+				+ ", isCompleted=" + isCompleted + ", category=" + category + "]";
 	}
 
 }
