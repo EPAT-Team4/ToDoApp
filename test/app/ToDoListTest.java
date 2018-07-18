@@ -18,9 +18,9 @@ public class ToDoListTest {
 	public void testListItems() {
 		// setup
 		ToDoList toDoList = new ToDoList();
-		Item item1 = new Item("item 1", 1, new Date());
-		Item item2 = new Item("item 2", 2, null);
-		Item item3 = new Item("item 3", null, null);
+		Item item1 = new Item("item 1", 1, new Date(), false);
+		Item item2 = new Item("item 2", 2, null, false);
+		Item item3 = new Item("item 3", null, null, false);
 		toDoList.addItem(item1);
 		toDoList.addItem(item2);
 		toDoList.addItem(item3);
@@ -36,9 +36,9 @@ public class ToDoListTest {
 	public void testAddItem() {
 		// setup
 		ToDoList toDoList = new ToDoList();
-		Item item1 = new Item("item 1", 1, new Date());
-		Item item2 = new Item("item 2", 2, null);
-		Item item3 = new Item("item 3", null, null);
+		Item item1 = new Item("item 1", 1, new Date(), false);
+		Item item2 = new Item("item 2", 2, null, false);
+		Item item3 = new Item("item 3", null, null, false);
 
 		// exercise
 		toDoList.addItem(item1);
@@ -53,9 +53,9 @@ public class ToDoListTest {
 	public void testDeleteItem() {
 		// setup
 		ToDoList toDoList = new ToDoList();
-		Item item1 = new Item("item 1", 1, new Date());
-		Item item2 = new Item("item 2", 2, null);
-		Item item3 = new Item("item 3", null, null);
+		Item item1 = new Item("item 1", 1, new Date(), false);
+		Item item2 = new Item("item 2", 2, null, false);
+		Item item3 = new Item("item 3", null, null, false);
 		toDoList.addItem(item1);
 		toDoList.addItem(item2);
 		toDoList.addItem(item3);
@@ -71,9 +71,9 @@ public class ToDoListTest {
 	public void testAddDueDateToItem() throws ParseException {
 		// setup
 		ToDoList toDoList = new ToDoList();
-		Item item1 = new Item("item 1", 1, new Date());
-		Item item2 = new Item("item 2", 2, null);
-		Item item3 = new Item("item 3", null, null);
+		Item item1 = new Item("item 1", 1, new Date(), false);
+		Item item2 = new Item("item 2", 2, null, false);
+		Item item3 = new Item("item 3", null, null, false);
 		toDoList.addItem(item1);
 		toDoList.addItem(item2);
 		toDoList.addItem(item3);
@@ -90,9 +90,9 @@ public class ToDoListTest {
 	public void testAddPriorityToItem() {
 		// setup
 		ToDoList toDoList = new ToDoList();
-		Item item1 = new Item("item 1", 1, new Date());
-		Item item2 = new Item("item 2", 2, null);
-		Item item3 = new Item("item 3", null, null);
+		Item item1 = new Item("item 1", 1, new Date(), false);
+		Item item2 = new Item("item 2", 2, null, false);
+		Item item3 = new Item("item 3", null, null, false);
 		toDoList.addItem(item1);
 		toDoList.addItem(item2);
 		toDoList.addItem(item3);
@@ -108,9 +108,9 @@ public class ToDoListTest {
 	public void testSearchItems() {
 		// setup
 		ToDoList toDoList = new ToDoList();
-		Item item1 = new Item("item 1", 1, new Date());
-		Item item2 = new Item("item 2", 2, null);
-		Item item3 = new Item("item 3", null, null);
+		Item item1 = new Item("item 1", 1, new Date(), false);
+		Item item2 = new Item("item 2", 2, null, false);
+		Item item3 = new Item("item 3", null, null, false);
 		toDoList.addItem(item1);
 		toDoList.addItem(item2);
 		toDoList.addItem(item3);

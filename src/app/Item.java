@@ -8,12 +8,14 @@ public class Item {
 	private String description;
 	private Integer priority;
 	private Date dueDate;
+	private boolean isCompleted;
 
-	public Item(String description, Integer priority, Date dueDate) {
+	public Item(String description, Integer priority, Date dueDate, boolean isCompleted) {
 		super();
 		this.description = description;
 		this.priority = priority;
 		this.dueDate = dueDate;
+		this.isCompleted = isCompleted;
 	}
 
 	public Integer getId() {
@@ -47,10 +49,18 @@ public class Item {
 	public void setDueDate(Date dueDate) {
 		this.dueDate = dueDate;
 	}
+	
+	public Boolean getIsCompleted() {
+		return isCompleted;
+	}
+
+	public void setIsCompleted(boolean isCompleted) {
+		this.isCompleted = isCompleted;
+	}	
 
 	@Override
 	public String toString() {
-		return "Item [id=" + id + ", description=" + description + ", priority=" + priority + ", dueDate=" + dueDate
+		return "Item [id=" + id + ", description=" + description + ", priority=" + priority + ", dueDate=" + dueDate + ", isCompleted=" + isCompleted
 				+ "]";
 	}
 

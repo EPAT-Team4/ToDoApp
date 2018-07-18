@@ -58,5 +58,14 @@ public class ToDoList {
 		List<Item> searchResult = items.stream().filter(o -> o.getDescription().contains(keywords)).collect(Collectors.toList());
 		return searchResult;
 	}
+	
+	public void setItemCompleted(Integer id) {
+		Optional<Item> item = items.stream().filter(o -> o.getId() == id).findFirst();
+		if (item.isPresent()) {
+			item.get().setIsCompleted(true);
+		} else {
+			throw new RuntimeException("Item " + id + " cannot be found.");
+		}
+	}
 
 }

@@ -25,7 +25,7 @@ public class MainClass {
 		System.out.println("1. List all to do list");
 		System.out.println("2. Add new item");
 		System.out.println("3. Delete an item");
-		System.out.println("4. Mark an item as complete");
+		System.out.println("4. Mark an item as complete");		
 		System.out.println("9. Quit");
 		System.out.print("Enter your choice: ");
 	}
@@ -45,7 +45,7 @@ public class MainClass {
 		case 2:
 			System.out.println("Please enter description for item to add: ");
 			String description = scanner.nextLine();
-			Item item = new Item(description, null, null);
+			Item item = new Item(description, null, null, false);
 			toDoList.addItem(item);
 			showCurrentList();
 			break;
@@ -57,6 +57,12 @@ public class MainClass {
 			showCurrentList();
 			break;
 
+		case 4:
+			System.out.println("Please enter item id to complete: ");
+			itemId = scanner.nextInt();
+			toDoList.setItemCompleted(itemId);
+			
+			break;
 		case 9:
 
 			break;
