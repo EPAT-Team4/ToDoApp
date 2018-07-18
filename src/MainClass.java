@@ -32,20 +32,18 @@ public class MainClass {
 
 	public static int readInput() {
 		int input = -1;
-		try {
+		if (scanner.hasNextInt()) {
 			input = scanner.nextInt();
-			scanner.nextLine();
-		} catch(Exception e) {
-			System.out.println("Invalid choice");
-		} 
-
+		}
+		scanner.nextLine();
+		
 		switch (input) {
 		case 1:
 			showCurrentList();
 			break;
 
 		case 2:
-			System.out.println("Please enter description: \n");
+			System.out.println("Please enter description for item to add: ");
 			String description = scanner.nextLine();
 			Item item = new Item(description, null, null, null);
 			toDoList.addItem(item);
@@ -53,7 +51,10 @@ public class MainClass {
 			break;
 
 		case 3:
-			System.out.println("3");
+			System.out.println("Please enter item id to delete: ");
+			int itemId = scanner.nextInt();
+			toDoList.deleteItem(itemId);
+			showCurrentList();
 			break;
 
 		case 9:
