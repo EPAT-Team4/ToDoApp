@@ -23,6 +23,11 @@ public class ToDoList {
 		return items.size();
 	}
 	
+	public Item getItem(Integer itemId) {
+		Optional<Item> item = items.stream().filter(o -> o.getId() == itemId).findFirst();
+		return item.isPresent() ? item.get() : null;
+	}
+	
 	public void addItem(Item item) {
 		item.setId(sequence++);
 		items.add(item);

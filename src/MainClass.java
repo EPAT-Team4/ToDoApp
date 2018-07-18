@@ -71,7 +71,7 @@ public class MainClass {
 			int itemPrioritizeId = scanner.nextInt();
 			System.out.println("Please enter Priority to set [1,2,3]: ");
 			int priorityLvl = scanner.nextInt();
-			toDoList.getItems().get(itemPrioritizeId).setPriority(priorityLvl);
+			toDoList.getItem(itemPrioritizeId).setPriority(priorityLvl);
 			showCurrentList();
 			break;
 		
@@ -81,7 +81,7 @@ public class MainClass {
 			scanner.nextLine();
 			System.out.println("Please enter Category: ");
 			String category = scanner.nextLine();
-			toDoList.getItems().get(itemCategorizeId).setcategory(category);
+			toDoList.getItem(itemCategorizeId).setcategory(category);
 			showCurrentList();
 			break;
 			
